@@ -2,18 +2,16 @@
 ETL-Query script
 """
 
-from mylib.extract import extract
+from mylib.etl import etl
 from mylib.transform_load import load
 from mylib.query import query
 
-# Extract
-print("Extracting data...")
-extract()
+def main():
+    # Extract - Transform - Load
+    etl()
+    print("hi, I get here after ETL")
+    query()
 
-# Transform and load
-print("Transforming data...")
-load()
 
-# Query
-print("Querying data...")
-query()
+if __name__ == "__main__":
+    main()
