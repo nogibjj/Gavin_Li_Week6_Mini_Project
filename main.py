@@ -3,7 +3,7 @@ ETL-Query script
 """
 
 from mylib.etl import etl
-from mylib.transform_load import load
+# from mylib.transform_load import load
 from mylib.query import query
 
 def main():
