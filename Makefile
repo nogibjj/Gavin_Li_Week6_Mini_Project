@@ -2,14 +2,8 @@ install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
 
-extract:
-	python main.py extract
-
-transform_load:
-	python main.py transform_load
-
 query:
-	python main.py query
+	python main.py R
 
 test:
 	python -m pytest -vv --cov=main --cov=mylib test_*.py
