@@ -11,6 +11,7 @@ def main():
     etl()
     print("hi, I get here after ETL")
     query()
+    return 0
 
 
 if __name__ == "__main__":
