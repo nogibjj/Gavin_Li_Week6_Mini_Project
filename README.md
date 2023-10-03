@@ -2,6 +2,11 @@
 
 ![4 17-etl-sqlite-RAW](https://github.com/nogibjj/sqlite-lab/assets/58792/b39b21b4-ccb4-4cc4-b262-7db34492c16d)
 
+# LET ME PUT ALL PICS HERE
+![CRUD_rlst](./resources/CRUD_rslt.png)
+![make_rslt](./resources/make_test_lint.png)
+![flow_chart](./resources/flow_chart.png)
+
 
 
 ### Lab:
