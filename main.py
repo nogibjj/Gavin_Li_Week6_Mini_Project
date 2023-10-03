@@ -21,7 +21,8 @@ def handle_cli():
         return 0
     elif len(args) == 1:
         cmd = args[0]
-        if cmd not in ["C", "R", "U", "D"]: return 1
+        if cmd not in ["C", "R", "U", "D"]:
+            return 1
         if cmd == "R":
             print(query())
         elif cmd == "C":
