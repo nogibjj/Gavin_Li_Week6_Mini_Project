@@ -13,4 +13,30 @@ def query():
     conn.close()
     return "Success"
 
+def insert():
+    conn = sqlite3.connect("Titanic.db")
+    c = conn.cursor()
+    c.execute(
+        """
+        INSERT INTO titanic 
+        (
+            survived,
+            p_class,
+            name,
+            sex,
+            age,
+            sib_sp,
+            parch,
+            ticket,
+            fare,
+            cabin,
+            embarked) 
+        VALUES (?, ?, ?, ?, ?, ?, ?)
+        """,
+        (1, 1, "Some Random Name", "male", 26, 0, 1, "PC 18000", 0.0, "C86", 'C')
+    )
+    print("Success Insertion")
+    conn.commit()
+    conn.close()
 
+    # Log the query
