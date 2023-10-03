@@ -53,7 +53,6 @@ def delete():
     conn.close()
     return "Success"
 
-
 def update():
     conn = sqlite3.connect("Titanic.db")
     c = conn.cursor()
