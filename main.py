@@ -23,29 +23,25 @@ def handle_cli():
         cmd = args[0]
         if cmd not in ["C", "R", "U", "D"]: return 1
         if cmd == "R":
-            query()
+            print(query())
         elif cmd == "C":
-            insert()
+            print(insert())
         elif cmd == "U":
-            update()
+            print(update())
         elif cmd == "D":
-            delete()
+            print(delete())
         return 0
     return 1
 
 def run_all():
     print("Retriving first 5 rows in database...")
-    query()
-    print("Retrival Success")
+    print(query())
     print("Inserting a record into database...")
-    insert()
-    print("Insertion Success")
-    print("Deleting all records in database...")
-    delete()
-    print("Delete Success")
+    print(insert())
     print("Updating a record in database...")
-    update()
-    print("Update Success")
+    print(update())
+    print("Deleting all records in database...")
+    print(delete())
 
 
 if __name__ == "__main__":

@@ -31,12 +31,41 @@ def insert():
             fare,
             cabin,
             embarked) 
-        VALUES (?, ?, ?, ?, ?, ?, ?)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """,
         (1, 1, "Some Random Name", "male", 26, 0, 1, "PC 18000", 0.0, "C86", 'C')
     )
-    print("Success Insertion")
+    # print("Success Insertion")
     conn.commit()
     conn.close()
+    return "Success"
 
-    # Log the query
+def delete():
+    conn = sqlite3.connect("Titanic.db")
+    c = conn.cursor()
+    c.execute(
+        """
+        DELETE FROM titanic
+        """
+    )
+    print("Success Delete")
+    conn.commit()
+    conn.close()
+    return "Success"
+
+
+def update():
+    conn = sqlite3.connect("Titanic.db")
+    c = conn.cursor()
+    c.execute(
+        """
+        UPDATE titanic
+        SET p_class=?
+        WHERE name = ?
+        """,
+        (3, "SOME RANDOM NAME")
+    )
+    print("Success Update")
+    conn.commit()
+    conn.close()
+    return "Success"
