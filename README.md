@@ -6,11 +6,11 @@ Gavin Li `gl183`
 
 The purpose of this week's mini project is to connect to database using python scripts, and manipulate database using python scripts.
 
-## Format, Lint, Test
+## Result for `make test` and `make lint`
 
 ![make_rslt](./resources/make_test_lint.png)
 
-## CRUD result
+## CRUD result and `make query`
 ![CRUD_rlst](./resources/CRUD_rslt.png)
 
 ## A flow chart demonstrating the workflow
