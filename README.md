@@ -8,10 +8,7 @@ The purpose of this week's mini project is to connect to a cloud database using 
 
 ## Result for `make test` and `make lint`
 
-![make_rslt](./resources/make_test_lint.png)
-
-## CRUD result and `make query`
-![CRUD_rlst](./resources/CRUD_rslt.png)
+![make_rslt](./resources/make_format_lint_test.png)
 
 ## A flow chart demonstrating the workflow
 ![flow_chart](./resources/flowchart.svg)
@@ -36,3 +33,7 @@ Then, I sorted the table by the state full name, and calculated summation of tot
 At last, I ranked the entire table by the number of crime cases across three years of 2016-2018 in descending order. It turns out that California has the most crime cases in those three years.
 
 The expecetd output should be a table of two columns. The first column is state full name, the second column is total number of crime cases in that state during 2016-2018.
+
+
+## SQL query result
+![SQL_rslt](./resources/query_rslt.png)
