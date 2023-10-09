@@ -1,70 +1,38 @@
 """Query the database"""
 
-import sqlite3
-
+from databricks import sql
+from dotenv import load_dotenv
+import os
 
 def query():
-    """Query the database for the top 5 rows of the GroceryDB table"""
-    conn = sqlite3.connect("Titanic.db")
-    cursor = conn.cursor()
-    cursor.execute("SELECT * FROM titanic LIMIT 5")
-    # print("Hi, just tried query some shit")
-    print(cursor.fetchall())
-    conn.close()
-    return "Success"
+    """My complex query here"""
+    load_dotenv()
+    with sql.connect(
+        server_hostname=os.getenv("SERVER_HOSTNAME"),
+        http_path=os.getenv("HTTP_PATH"),
+        access_token=os.getenv("ACCESS_TOKEN")
+    ) as connection:
+        c = connection.cursor()
+        c.execute(
+            # """
+            # SELECT * FROM state_abbrevs WHERE state="Ohio";            
+            # """
+            # """
+            # SELECT * FROM us_crime WHERE year=2016 AND state="OH";
+            # """
+            """
+            SELECT state_abbrevs.state, SUM(total) AS total_crimes
+            FROM us_crime
+            JOIN state_abbrevs ON us_crime.state = state_abbrevs.abbrev
+            GROUP BY state_abbrevs.state
+            ORDER BY total_crimes DESC;
+            """
+            ## involves join, sum (aggregation), sort (GRUOP BY), let's also include ranking
+        )
+        rslt = c.fetchall()
+        print(rslt)
+        c.close()
 
-def insert():
-    conn = sqlite3.connect("Titanic.db")
-    c = conn.cursor()
-    c.execute(
-        """
-        INSERT INTO titanic 
-        (
-            survived,
-            p_class,
-            name,
-            sex,
-            age,
-            sib_sp,
-            parch,
-            ticket,
-            fare,
-            cabin,
-            embarked) 
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """,
-        (1, 1, "Some Random Name", "male", 26, 0, 1, "PC 18000", 0.0, "C86", 'C')
-    )
-    # print("Success Insertion")
-    conn.commit()
-    conn.close()
-    return "Success"
 
-def delete():
-    conn = sqlite3.connect("Titanic.db")
-    c = conn.cursor()
-    c.execute(
-        """
-        DELETE FROM titanic
-        """
-    )
-    print("Success Delete")
-    conn.commit()
-    conn.close()
-    return "Success"
-
-def update():
-    conn = sqlite3.connect("Titanic.db")
-    c = conn.cursor()
-    c.execute(
-        """
-        UPDATE titanic
-        SET p_class=?
-        WHERE name = ?
-        """,
-        (3, "SOME RANDOM NAME")
-    )
-    print("Success Update")
-    conn.commit()
-    conn.close()
-    return "Success"
+if __name__ == "__main__":
+    query()

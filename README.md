@@ -17,3 +17,13 @@ The purpose of this week's mini project is to connect to database using python s
 ![flow_chart](./resources/flow_chart.png)
 
 
+```sql
+SELECT
+    state_abbrevs.state,
+    SUM(total) AS total_crimes
+FROM us_crime
+JOIN state_abbrevs
+ON us_crime.state = state_abbrevs.abbrev
+GROUP BY state_abbrevs.state
+ORDER BY total_crimes DESC;
+```
