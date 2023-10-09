@@ -4,13 +4,13 @@ ETL-Query script
 
 import sys
 
-from mylib.etl import etl
+from mylib.extract import extract
 # from mylib.transform_load import load
 from mylib.query import query, delete, insert, update
 
 def main():
     # Extract - Transform - Load
-    etl()
+    # etl()
     return handle_cli()
 
 def handle_cli():
