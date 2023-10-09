@@ -1,4 +1,4 @@
-# Week 5 Mini Project
+# Week 6 Mini Project
 
 Gavin Li `gl183`
 
