@@ -40,7 +40,7 @@ def load():
                 convert = tuple(row)
                 c.execute(f"INSERT INTO us_crime VALUES {convert}")
         # print(df2)
-        c.execute("DROP TABLE IF EXISTS state_abbrevs")
+        # c.execute("DROP TABLE IF EXISTS state_abbrevs")
         c.execute("SHOW TABLES FROM default LIKE 'state_*'")
         rslt = c.fetchall()
         print(rslt)
