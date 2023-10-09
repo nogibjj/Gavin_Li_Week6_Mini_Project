@@ -10,8 +10,8 @@ from mylib.query import query, delete, insert, update
 
 def main():
     # Extract - Transform - Load
-    # etl()
-    return handle_cli()
+    extract()
+    # return handle_cli()
 
 def handle_cli():
     args = sys.argv[1:]
