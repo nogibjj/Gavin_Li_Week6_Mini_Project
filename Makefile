@@ -3,7 +3,7 @@ install:
 		pip install -r requirements.txt
 
 query:
-	python main.py R
+	python mylib/query.py
 
 test:
 	python -m pytest -vv --cov=main --cov=mylib test_*.py
