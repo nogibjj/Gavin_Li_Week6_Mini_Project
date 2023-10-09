@@ -1,4 +1,4 @@
-# Week 6 Mini Project
+# Week 6 Mini Project [![CI](https://github.com/nogibjj/Gavin_Li_Week6_Mini_Project/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/Gavin_Li_Week6_Mini_Project/actions/workflows/cicd.yml)
 
 Gavin Li `gl183`
 
