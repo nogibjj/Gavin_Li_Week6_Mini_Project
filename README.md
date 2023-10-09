@@ -14,7 +14,7 @@ The purpose of this week's mini project is to connect to a cloud database using 
 ![CRUD_rlst](./resources/CRUD_rslt.png)
 
 ## A flow chart demonstrating the workflow
-![flow_chart](./resources/flow_chart.png)
+![flow_chart](./resources/flowchart.svg)
 
 ## My complex SQL query
 
