@@ -20,11 +20,13 @@ def load():
         c = connection.cursor()
         c.execute("SHOW TABLES FROM default LIKE 'US_TRAVEL'")
         rslt = c.fetchall()
-        print(rslt)
-        # if not rslt:
-        #     ## create table
-        #     c.execute(
-        #         """
-        #         CREATE TABLE IF NOT EXISTS US_TRAVEL
-        #         """
-        #     )
+        # print(rslt)
+        if not rslt:
+            ## create table
+            c.execute(
+                """
+                CREATE TABLE IF NOT EXISTS US_TRAVEL (
+                    
+                )
+                """
+            )
