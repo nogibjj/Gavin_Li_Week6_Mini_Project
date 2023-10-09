@@ -15,21 +15,21 @@ def query():
         c = connection.cursor()
         c.execute(
             # """
-            # SELECT * FROM state_abbrevs WHERE state="Ohio";            
+            # SELECT * FROM state_abbrevs;            
             # """
             # """
             # SELECT * FROM us_crime WHERE year=2016 AND state="OH";
             # """
-            # """
-            # SELECT state_abbrevs.state, SUM(total) AS total_crimes
-            # FROM us_crime
-            # JOIN state_abbrevs ON us_crime.state = state_abbrevs.abbrev
-            # GROUP BY state_abbrevs.state
-            # ORDER BY total_crimes DESC;
-            # """
             """
-            DROP TABLE IF EXISTS state_abbrevs
+            SELECT state_abbrevs.state, SUM(total) AS total_crimes
+            FROM us_crime
+            JOIN state_abbrevs ON us_crime.state = state_abbrevs.abbrev
+            GROUP BY state_abbrevs.state
+            ORDER BY total_crimes DESC;
             """
+            # """
+            # DROP TABLE IF EXISTS state_abbrevs
+            # """
             ## involves join, sum (aggregation), sort (GRUOP BY)
             ## let's also include ranking
         )

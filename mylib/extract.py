@@ -24,3 +24,5 @@ def extract():
             f.write(r.content)
     return f1, f2
 
+if __name__ == "__main__":
+    extract()
