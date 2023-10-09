@@ -4,7 +4,7 @@ Gavin Li `gl183`
 
 ## Purpose of the project
 
-The purpose of this week's mini project is to connect to database using python scripts, and manipulate database using python scripts.
+The purpose of this week's mini project is to connect to a cloud database using python scripts, and design a complex SQL query that involves __join__, __aggregation__, and __sorting__. Then I will explain what the query is doing.
 
 ## Result for `make test` and `make lint`
 
@@ -16,6 +16,7 @@ The purpose of this week's mini project is to connect to database using python s
 ## A flow chart demonstrating the workflow
 ![flow_chart](./resources/flow_chart.png)
 
+## My complex SQL query
 
 ```sql
 SELECT

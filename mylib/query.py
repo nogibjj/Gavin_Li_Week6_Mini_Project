@@ -27,7 +27,8 @@ def query():
             GROUP BY state_abbrevs.state
             ORDER BY total_crimes DESC;
             """
-            ## involves join, sum (aggregation), sort (GRUOP BY), let's also include ranking
+            ## involves join, sum (aggregation), sort (GRUOP BY)
+            ## let's also include ranking
         )
         rslt = c.fetchall()
         print(rslt)

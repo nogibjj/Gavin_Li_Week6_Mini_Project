@@ -6,7 +6,8 @@ from main import main
 
 
 def test_main():
-    assert main() == 1
+    assert main() == 0
+
 
 if __name__ == "__main__":
     test_main()
