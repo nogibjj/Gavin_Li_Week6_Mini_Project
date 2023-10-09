@@ -1,6 +1,6 @@
 import os
 import requests
-import pandas as pd
+# import pandas as pd
 import shutil
 
 def extract():
@@ -22,4 +22,5 @@ def extract():
     with requests.get(url2) as r:
         with open(f2, "wb") as f:
             f.write(r.content)
+    return f1, f2
 
